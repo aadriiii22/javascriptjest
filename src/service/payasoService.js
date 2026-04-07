@@ -1,7 +1,7 @@
 // src/service/payasoService.js
-const db = require("../db");
+const db = require("../repository/payasosRepository");
 
-async function registerPayaso(name, email) {
+async function registerPayaso(name, email, arma) {
   if (!name || !email) {
     throw new Error("El nombre y el email son obligatorios");
   }
@@ -14,7 +14,7 @@ async function registerPayaso(name, email) {
   }
 
   // 2. Si no existe, lo guardamos en la base de datos
-  const newPayaso = await db.savePayaso({ name, email });
+  const newPayaso = await db.savePayaso({ name, email, arma });
 
   return newPayaso;
 }
