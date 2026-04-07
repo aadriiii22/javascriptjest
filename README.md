@@ -15,4 +15,6 @@
 
 Conexión a la BBDD lite:
 
-1. npm install sqlite3 sqlite | Consejo: Usar la extension extensión "SQLite Viewer" de Florian Klampfer
+1. npm install sqlite3 sqlite | Consejo: Usar la extension extensión "SQLite Viewer" de Florian Klampfer en Vs Code
+2. Creamos una carpeta llamada repository y modificamos el db.js, con el repositorio de github del profe, y vamos a adaptarlo
+3.
