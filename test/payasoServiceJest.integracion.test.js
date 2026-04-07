@@ -28,9 +28,9 @@ describe("Pruebas de Integración: PayasoService + SQLite", () => {
     expect(result).toHaveProperty("id");
     expect(result.name).toBe("Pennywise");
 
-    const payasoInDb = await db.findPayasoByEmail("ana@ejemplo.com");
+    const payasoInDb = await db.findPayasoByEmail("penny@wise.com");
     expect(payasoInDb).not.toBeNull();
-    expect(payasoInDb.name).toBe("Ana López");
+    expect(payasoInDb.name).toBe("Pennywise");
   });
 
   test("Debe lanzar un error si intentamos registrar un email duplicado", async () => {
