@@ -10,3 +10,9 @@
 9. Modificamos package.json en test poner: -> "test": "jest"
 10. ponemos en el terminal npm test
 11. Y se realiza correctamente los test
+
+---
+
+Conexión a la BBDD lite:
+
+1. npm install sqlite3 sqlite | Consejo: Usar la extension extensión "SQLite Viewer" de Florian Klampfer
