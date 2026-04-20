@@ -1,30 +1,20 @@
-1. npm init -y //esto es para crear servidor node
-2. npm install --save-dev jest //instalar framework JEST para testeo
+1. npm init -y //Crear el servidor node
+2. npm install --save-dev jest //Instalamos framework JEST para testeo
+3. Creamos la carpeta test y src al mismo nivel que la "node_modules"
+4. Publicamos en Github
+5. Vamos a simular una base de datos: Para ello creaamos dentro de src:
+   Al mismo nivel un archivo db.js y una carpeta service con payasoService.js dentro
+6. Coopiamos las cosas de "https://github.com/zoniak/IntegracionJest/tree/main"
+7. Modificamos todo para que esté adaptado a los payasos asesinos
+8. Creamos payasoServiceJestIntegracion.test.js y lo añadimos
+9. Modificamos package.json en test poner: -> "test": "jest"
+10. ponemos en el terminal npm test
+11. Y se realiza correctamente los test
 
-Para la bbdd:
+---
 
-1. npm install sqlite3 sqlite
+Conexión a la BBDD lite:
 
-Usar la extension extensión "SQLite Viewer" de Florian Klampfer
-
-Instalar express:
-
-1. npm install express
-
-Para lanzar el proyecto:  
-node .\src\controller\payasosController.js
-
-Ejemplo de consulta para el post:
-
-    {
-        "name": "Donald Trump",
-        "email": "payasos@casablanca.com",
-        "arma": "demagogo"
-    }
-
-Para el frontend vamos a instalar cors:
-
-1. npm install cors
-
-Soluciones problemas:  
-No ejecuta el js del controller - ejecutar con node y la ruta del archivo
+1. npm install sqlite3 sqlite | Consejo: Usar la extension extensión "SQLite Viewer" de Florian Klampfer en Vs Code
+2. Creamos una carpeta llamada repository y modificamos el db.js, con el repositorio de github del profe, y vamos a adaptarlo
+3. Copiamos y vamos modificando segúns seguimos la clase añadiendo y modificando nombres
