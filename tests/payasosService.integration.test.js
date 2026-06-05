@@ -72,7 +72,7 @@ describe("Pruebas de Integración: PayasosService + SQLite", () => {
   // TEST 4: Comprueba la conexión Service → Repository → BBDD usando getAllPayasos()
 
   test("Debe obtener todos los payasos registrados en la base de datos", async () => {
-    // 1. Limpiamos y preparamos un entorno conocido
+    // 1. Limpiamos y preparamos unos payasos para tener información en la BBDD
     await db.clear();
     await registerPayaso("Pedro", "pedropicapiedra@gmail.com", "piedra");
     await registerPayaso("Jesus", "diosomnipresente@gmail.com", "bastón");
@@ -89,7 +89,7 @@ describe("Pruebas de Integración: PayasosService + SQLite", () => {
   // TEST 5: Comprueba la conexión Repository → BBDD usando findPayasoByName()
 
   test("Debe encontrar un payaso por nombre directamente en el repositorio", async () => {
-    // 1. Registramos un payaso a través del service (flujo completo)
+    // 1. Registramos un payaso a través del service
     await registerPayaso("Ronald", "ronald@mcdonalds.com", "hamburguesa");
 
     // 2. Llamamos directamente al repository para buscar por nombre
@@ -103,7 +103,7 @@ describe("Pruebas de Integración: PayasosService + SQLite", () => {
   }); // fin test 5
 
   // TEST 6: Comprueba que el Service bloquea un nombre duplicado (Service → Repository → BBDD)
-  // Cubre la segunda regla de negocio de registerPayaso() que no estaba testeada
+
   test("Debe lanzar un error si intentamos registrar un nombre duplicado", async () => {
     // 1. Registramos un payaso primero para que el nombre ya exista en la BBDD
     await registerPayaso("Bibi Netanyahu", "sionista@autoritario.com", "poder");
